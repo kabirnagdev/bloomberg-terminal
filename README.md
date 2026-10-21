@@ -1,4 +1,5 @@
-![Uploading Blue White Minimal Technology Brand Business Card.png…]()
+<img width="735" height="420" alt="image" src="https://github.com/user-attachments/assets/f7998ba7-26de-4959-ae7b-4bd502812881" />
+
 
 
 A hybrid RAG system exploring how knowledge graphs, semantic search, and LLMs can answer questions about financial survey data.
