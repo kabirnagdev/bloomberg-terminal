@@ -22,22 +22,8 @@ The project uses a structured CSV dataset containing survey responses about inve
 6. **Generate Answer** — Pass the evidence to a Groq-hosted LLM to produce a context-grounded response.
 
 ### Query Flow
+<img width="1312" height="1199" alt="image" src="https://github.com/user-attachments/assets/c817aa4d-c2db-4de5-862b-cb8fd6fa19b8" />
 
-```text
-User Question
-     ↓
-Keyword & Entity Matching
-     ↓
-Graph Retrieval + Vector Search
-     ↓
-Relevant Records + Relationships
-     ↓
-Statistical Context
-     ↓
-Groq LLM
-     ↓
-Final Answer
-```
 
 ### Tech Stack
 
