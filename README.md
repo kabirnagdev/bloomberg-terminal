@@ -1,4 +1,5 @@
-# Finance Knowledge Graph & Graph RAG
+![Uploading Blue White Minimal Technology Brand Business Card.png…]()
+
 
 A hybrid RAG system exploring how knowledge graphs, semantic search, and LLMs can answer questions about financial survey data.
 
