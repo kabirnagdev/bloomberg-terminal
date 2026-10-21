@@ -1,5 +1,1 @@
-Implements SVI (Stochastic Volatility Inspired) parameterization 
-to fit implied volatility across strike and expiry dimensions.
-IV is solved numerically using Newton-Raphson on the Black-Scholes 
-vega. Surface is validated for static arbitrage (butterfly and 
-calendar spread conditions).
+Financial reports are semi-structured, mixing tables and narrative. Fixed-size chunking splits tables from their headers and numbers from their context, which causes "error cascades" that no downstream LLM can fix. The paper asks: RQ1: Which chunking strategies exist for financial documents, and how do they affect the precision/recall trade-off? RQ2: Which indexing and retrieval architectures work well with semantically chunked financial data?
