@@ -1,1 +1,64 @@
-Financial reports are semi-structured, mixing tables and narrative. Fixed-size chunking splits tables from their headers and numbers from their context, which causes "error cascades" that no downstream LLM can fix. The paper asks: RQ1: Which chunking strategies exist for financial documents, and how do they affect the precision/recall trade-off? RQ2: Which indexing and retrieval architectures work well with semantically chunked financial data?
+# Finance Knowledge Graph & Graph RAG
+
+A hybrid RAG system exploring how knowledge graphs, semantic search, and LLMs can answer questions about financial survey data.
+
+### Dataset
+
+The project uses a structured CSV dataset containing survey responses about investment preferences, savings objectives, and related financial attributes. Each row represents a record, while selected categorical values become entities in the knowledge graph.
+
+**Note:** This is survey data, not live stock prices or financial filings.
+
+### How It Works
+
+1. **Load Data** — Clean the CSV and identify categorical and property columns.
+2. **Build Knowledge Graph** — Connect records to entities and discover co-occurrence relationships using lift.
+3. **Generate Embeddings** — Encode records, entity labels, and column names using Sentence Transformers.
+4. **Process Query** — Extract keywords, match relevant entities, perform vector search, and expand through graph relationships.
+5. **Build Context** — Combine retrieved records, graph relationships, and computed statistics.
+6. **Generate Answer** — Pass the evidence to a Groq-hosted LLM to produce a context-grounded response.
+
+### Query Flow
+
+```text
+User Question
+     ↓
+Keyword & Entity Matching
+     ↓
+Graph Retrieval + Vector Search
+     ↓
+Relevant Records + Relationships
+     ↓
+Statistical Context
+     ↓
+Groq LLM
+     ↓
+Final Answer
+```
+
+### Tech Stack
+
+`Python` · `Pandas` · `NumPy` · `NetworkX` · `RDFLib` · `Sentence Transformers` · `Scikit-learn` · `Groq`
+
+### Run Locally
+
+```bash
+git clone https://github.com/kabirnagdev/bloomberg-terminal.git
+cd bloomberg-terminal
+pip install pandas numpy networkx rdflib sentence-transformers scikit-learn matplotlib groq
+```
+
+### Key Capabilities
+
+- **Knowledge Graph Construction** — Converts tabular financial survey data into interconnected records and entities.
+- **Association Mining** — Discovers co-occurrence patterns using statistical lift.
+- **Hybrid Retrieval** — Combines semantic vector search, entity matching, and graph traversal.
+- **Contextual Question Answering** — Uses retrieved records, relationships, and computed statistics to ground LLM responses.
+- **RDF Export** — Serializes graph data into Turtle format for interoperability.
+- **Plain RAG Baseline** — Supports comparison with vector-only retrieval.
+- **Resilient Embeddings** — Falls back to character n-gram hashing when the embedding model is unavailable.
+
+Open `Knowledge_graph_finance_RAG_2.ipynb` in Jupyter Notebook or Google Colab, configure the dataset path and `GROQ_API_KEY`, and run the notebook cells.
+
+**Author:** [Kabir Nagdev](https://github.com/kabirnagdev)
+
+*An experimental project in knowledge graphs, hybrid retrieval, and LLM-powered data analysis.*
