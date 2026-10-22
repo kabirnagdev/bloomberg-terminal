@@ -11,6 +11,8 @@ A hybrid RAG system exploring how knowledge graphs, semantic search, and LLMs ca
 The project uses a structured CSV dataset containing survey responses about investment preferences, savings objectives, and related financial attributes. Each row represents a record, while selected categorical values become entities in the knowledge graph.
 
 **Note:** This is survey data, not live stock prices or financial filings.
+### How it approaches
+<img width="1024" height="507" alt="image" src="https://github.com/user-attachments/assets/0ffb34b6-4748-47b3-a8c3-fda5178e5e52" />
 
 ### How It Works
 
