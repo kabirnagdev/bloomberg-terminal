@@ -1,7 +1,5 @@
 <img width="735" height="420" alt="image" src="https://github.com/user-attachments/assets/e6c75473-627a-4ac9-8640-995a97c4bb5c" />
 
-while this is how classical vector only rag works 
-<img width="828" height="433" alt="image" src="https://github.com/user-attachments/assets/554abb1b-1933-4548-b09b-759aab8f2f25" />
 
 
 
@@ -15,6 +13,10 @@ The project uses a structured CSV dataset containing survey responses about inve
 **Note:** This is survey data, not live stock prices or financial filings.
 ### How it approaches
 <img width="1024" height="507" alt="image" src="https://github.com/user-attachments/assets/0ffb34b6-4748-47b3-a8c3-fda5178e5e52" />
+
+
+while this is how classical vector only rag works 
+<img width="828" height="433" alt="image" src="https://github.com/user-attachments/assets/554abb1b-1933-4548-b09b-759aab8f2f25" />
 
 ### How It Works
 
